@@ -13,10 +13,11 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  // Updated search handler to match the second navbar's approach
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+      navigate(`/?search=${searchQuery}`);
       setSearchQuery('');
     }
   };
