@@ -74,7 +74,7 @@ const Home = () => {
                         <span className="text-red-600">{inputname}</span>
                     </>
                 ) : (
-                    <>Tendances du moment 🎥</>
+                    <>Movies </>
                 )}
             </h2>
 

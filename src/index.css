@@ -4,6 +4,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    font-family: "Inter", sans-serif;
-}
+/* Base theme variables */
+:root {
+    --text-color: #1a202c;
+    --bg-color: #f7fafc;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --input-bg: #e2e8f0;
+    --button-primary: #3182ce;
+    --button-hover: #2c5282;
+  }
+  
+  /* Dark theme variables */
+  .dark {
+    --text-color: #f7fafc;
+    --bg-color: #1a202c;
+    --card-bg: #2d3748;
+    --card-border: #4a5568;
+    --input-bg: #4a5568;
+    --button-primary: #3182ce;
+    --button-hover: #4299e1;
+  }
+  
+  /* Apply variables to the body */
+  body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
