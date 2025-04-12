@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import Detailpage from './pages/detailpage'
+import Favoris from './pages/Favoris'
+
 function App() {
   return (
     <Router>
@@ -10,8 +13,9 @@ function App() {
         <Navbar />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
-
+            <Route path="/" element={<Home />} />           
+            <Route path="/Detailpage/movie/:id" element={<Detailpage />} />
+            <Route path="/favoris" element={<Favoris />} />
           </Routes>
         </main>
         <Footer />

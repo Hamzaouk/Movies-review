@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from "../assets/Logo.png"
-import { Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,6 +57,17 @@ const Navbar = () => {
               </form>
             </div>
 
+            {/* Favorites Link - Desktop */}
+            <div className="hidden md:block">
+              <Link 
+                to="/favoris" 
+                className="flex items-center text-white hover:text-red-500 transition-colors duration-300"
+              >
+                <Heart size={20} className="mr-2" />
+                <span>Favoris</span>
+              </Link>
+            </div>
+
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button
@@ -88,6 +100,15 @@ const Navbar = () => {
               </button>
             </form>
 
+            {/* Mobile Favorites Link */}
+            <Link 
+              to="/favoris" 
+              className="flex items-center px-3 py-2 text-white hover:text-red-500 hover:bg-gray-900 rounded-md transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Heart size={20} className="mr-2" />
+              <span>Favoris</span>
+            </Link>
           </div>
         </div>
       </nav>
